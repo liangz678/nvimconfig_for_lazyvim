@@ -6,4 +6,16 @@ return {
       require("better_escape").setup()
     end,
   },
+  {
+    "echasnovski/mini.icons",
+    opts = {
+      extension = {
+        ["hpp"] = { glyph = "H", hl = "MiniIconsBlue" },
+        -- hpp = { glyph = "󰟓", hl = "MiniIconsBlue" },
+      },
+      -- filetype = {
+      --   cpp = { glyph = "󰟓", hl = "MiniIconsGrey" },
+      -- },
+    },
+  },
 }
