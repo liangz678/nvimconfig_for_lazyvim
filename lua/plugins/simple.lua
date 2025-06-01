@@ -5,6 +5,12 @@ return {
     config = function()
       require("better_escape").setup()
     end,
+    opts = {
+      scode = {
+        vscode = true, -- 相当于在 scode 相关配置中启用 vscode 相关特性
+      },
+      
+    },
   },
   {
     "echasnovski/mini.icons",
