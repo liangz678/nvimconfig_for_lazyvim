@@ -8,7 +8,7 @@
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 local os_info = vim.fn.system("uname -a")
 
-if string.find(os_info, "Windows") then
+if string.find(os_info, "Windows") or string.find(os_info, "WSL") then
   vim.cmd([[
   autocmd BufEnter *.slint :setlocal filetype=slint
   " autocmd VimEnter * !im-select.exe 1033
