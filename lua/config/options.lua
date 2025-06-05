@@ -6,6 +6,9 @@
 local opt = vim.opt
 opt.wrap = true
 opt.showbreak = "↪"
+opt.tabstop = 4
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 vim.g.lazyvim_python_lsp = "basedpyright"
 vim.g.lazyvim_python_ruff = "ruff"
