@@ -6,16 +6,14 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
-local os_info = vim.fn.system("uname -a")
 
-if string.find(os_info, "Windows") or string.find(os_info, "WSL") then
+if vim.fn.has("win32") == 1 or vim.fn.has("wsl") == 1 then
   vim.cmd([[
-  autocmd BufEnter *.slint :setlocal filetype=slint
+  " autocmd BufEnter *.slint :setlocal filetype=slint
   " autocmd VimEnter * !im-select.exe 1033
   autocmd InsertEnter * :silent :!im-select.exe 2052
   autocmd InsertLeave * :silent :!im-select.exe 1033
   autocmd VimLeave * :silent: :!im-select.exe 2052
-
   ]])
 else
   vim.cmd([[

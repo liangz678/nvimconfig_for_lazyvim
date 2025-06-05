@@ -9,7 +9,6 @@ return {
       scode = {
         vscode = true, -- 相当于在 scode 相关配置中启用 vscode 相关特性
       },
-      
     },
   },
   {
